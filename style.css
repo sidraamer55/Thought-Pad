@@ -1,0 +1,126 @@
+
+/* creat a css variables: */
+:root{
+    --firstColor: #162e1b;
+    --seconedColor: #084714;
+    --thirdColot: #049321;
+    --fourthColor: #4a514b;
+    --fifthColor: #ffffff;
+    --firstFont:'Cormorant Garamond', serif;
+    --seconedFont:"Stalemate";
+}
+
+
+/* choose default font for all contacts */
+*{
+    font-family: var(--firstFont);
+}
+
+/* body styling: */
+body{
+    font-family: var(--firstFont);
+    background-image: 
+        linear-gradient(45deg, 
+            rgba(22, 46, 27, 0.15) 0%, 
+            rgba(4, 147, 33, 0.08) 100%),
+        url(soft-green-soft.gif);
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    /*background-repeat: no-repeat;  Prevents the image from repeating */
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* header styling: */
+h1{
+    font-family: var(--seconedFont);
+    text-align: center;
+}
+
+/* styling for Div container: */
+.container{
+    width: 400px;
+    margin: 50px auto;
+    padding:30px;
+    background-color: var(--fifthColor);
+    border-radius: 5px;
+    box-shadow: 1 0 10px rgba(4, 78,15, 0.1);
+}
+
+/* styling for text area box: */
+textarea{
+    width: 100%;
+    height: 100px;
+    padding: 2px;
+    margin-bottom: 10px;
+}
+
+/* styling of add note btn: */
+#addNoteBtn{
+    width: 100%;
+    padding: 10px;
+    background-color: var(--seconedColor);
+    color: var(--fifthColor);
+    border: none;
+    border-radius: 5px;
+    font-family: var(--firstFont);
+    font-size: large;
+    text-decoration: solid;
+    
+}
+
+#addNoteBtn:hover{
+    background-color: var(--firstColor);
+    cursor: pointer;
+    transform: scale(1.04); /* Slight scale effect */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* styling when we hover the btn: */
+button:hover{
+    background-color: var(--firstColor);
+    cursor: pointer;
+    transform: scale(1.1); /* Slight scale effect */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* style of note list: */
+#noteList{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* style of note item: */
+.note-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #e7e7e7;
+}
+
+/* style of delete btn: */
+.delete-item{
+    padding: 10px;
+    background-color: var(--seconedColor);
+    color: var(--fifthColor);
+    border: none;
+    border-radius: 5px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 764px) {
+    .container {
+        width: 100%;
+        padding: 30px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+     textarea, button {
+        font-size: 1rem;
+    }
+}
